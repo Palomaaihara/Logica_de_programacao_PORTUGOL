@@ -1,0 +1,37 @@
+programa {
+  funcao inicio() {
+    //calculadora simples
+    real num1, num2
+    caracter operacao
+
+    enquanto (operacao != "1" e operacao != "2" e operacao != "3" e operacao != "4" e operacao != "5") {
+      escreva("Escolha a opção desejada: \n1 - Somar \n2 - Dividir \n3 - Subtrair \n4 - Multiplicar \n5 - Porcentagem \n")
+      leia(operacao)
+
+      se (operacao != "1" e operacao != "2" e operacao != "3" e operacao != "4" e operacao != "5") {
+        escreva("Código inválido! Escolha um número das cinco opções abaixo.\n")
+    }
+    }
+    escreva("\nDigite o primeiro numero: ")
+    leia(num1)
+    escreva("Digite o segundo numero: ")
+    leia(num2)
+
+    se(operacao =='1'){
+      escreva("A soma entre o numero ",num1," com o numero ",num2," é igual a ",num1+num2)
+    }
+    se(operacao =='2'){
+      escreva("A divisao entre o numero ",num1," com o numero ",num2," é igual a ",num1/num2)
+    }
+    se(operacao =='3'){
+      escreva("A subtraçao entre o numero ",num1," com o numero ",num2," é igual a ",num1-num2)
+    }
+    se(operacao =='4'){
+      escreva("A multiplicaçao entre o numero ",num1," com o numero ",num2," é igual a ",num1*num2)
+    }
+    se(operacao =='5'){
+      escreva(num1,"% de ",num2," é igual a ", (num1/100)*num2)
+    }
+    }
+  }
+}
