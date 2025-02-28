@@ -1,0 +1,12 @@
+programa
+{
+	//Print dos numeros pares
+	funcao inicio()
+	{
+		//SOMAS DOS PRIMEIROS NUMEROS PARES
+		inteiro i
+		para(i=0;i<=10;i++){
+			escreva("\n", i+i)
+			}
+	}
+}
