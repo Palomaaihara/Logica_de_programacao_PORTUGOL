@@ -8,7 +8,7 @@ programa {
     leia(num)
     escreva("Até qual número você quer? " )
     leia(var)
-    escreva(" ---------- Digite o número da operaçao desejada ---------- \n 1-Adição\n 2-Subtração\n 3-Multiplicação\n 4-Divisão ")
+    escreva(" ---------- Digite o número da operaçao desejada ---------- \n 1-Adição\n 2-Subtração\n 3-Multiplicação\n 4-Divisão\n \nRESPOSTA:  ")
     leia(operacao)
     
     se(operacao == '1'){
@@ -30,6 +30,7 @@ programa {
     para(i=1;i<=var;i++){
       escreva("\n",num," / ",i," = ", i/num)
     }}
+
 
   escreva("\nFIM")  
  }
