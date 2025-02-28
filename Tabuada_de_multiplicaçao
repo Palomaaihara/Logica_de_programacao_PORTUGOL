@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+    //Tabuada de multplicaçao
+    inteiro num, i
+    escreva("Qual é o numero que voce deseja saber a tabuada? ")
+    leia(num)
+
+    para(i=1;i<=10;i++){
+      escreva("\n",num," X ",i," = ", num*i)
+    }
+  escreva("\nFIM")  
+ }
+}
