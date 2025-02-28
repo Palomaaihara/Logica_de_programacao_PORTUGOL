@@ -1,0 +1,10 @@
+programa {
+  funcao inicio() {
+    //Enquanto i for menor ou igual a 10, o codigo ira rodar e fazer a incrementaçao de 1 em 1.
+    inteiro i
+    para(i=1;i<=10;i++){
+      escreva("\n",i*i)
+   }
+  escreva("\nfim")
+ }
+}
