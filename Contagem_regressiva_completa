@@ -1,0 +1,17 @@
+programa {
+  funcao inicio() {
+    //Contagem regressiva de um numero inicio ate um numero i, onde o usurio possa escolher
+    inteiro i, inicio, fim
+
+    escreva("Digite em qual numero sua contagem regressiva deve começar? ")
+    leia(inicio)
+    escreva("Em qual numero sua contagem regressiva deve finalizar? ")
+    leia(fim)
+
+    para(i=inicio;i>=fim;i--){
+      escreva("\n",i)
+    }
+
+  escreva("\nFIM")
+ }
+}
