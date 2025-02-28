@@ -1,0 +1,35 @@
+programa {
+  funcao inicio() {
+    //Tabuada de com as 4 operacoes e com menu
+    inteiro num, i
+    caracter operacao
+
+    escreva("Qual é o numero que voce deseja saber a tabuada? ")
+    leia(num)
+    escreva(" ---------- Digite o número da operaçao desejada ---------- \n 1-Adição\n 2-Subtração\n 3-Multiplicação\n 4-Divisão ")
+    leia(operacao)
+
+    se(operacao == '1'){
+    para(i=1;i<=10;i++){
+      escreva("\n",num," + ",i," = ", num+i)
+    }}
+
+    se(operacao == '2'){
+    para(i=1;i<=10;i++){
+      escreva("\n",num," - ",i," = ", num-i)
+    }}
+
+    se(operacao == '3'){
+    para(i=1;i<=10;i++){
+      escreva("\n",num," X ",i," = ", num*i)
+    }}
+
+    se(operacao == '4'){
+    para(i=1;i<=10;i++){
+      escreva("\n",num," / ",i," = ", i/num)
+    }}
+
+  escreva("\nFIM")  
+ }
+}
+
