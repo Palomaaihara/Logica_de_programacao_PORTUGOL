@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+    //Contagem regressiva de 1 a 10
+    inteiro i
+
+    para(i=10;i>=1;i--){
+      escreva("\n",i)
+    }
+
+  escreva("\nFIM")
+ }
+}
+
