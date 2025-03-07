@@ -1,0 +1,41 @@
+programa
+{
+    funcao inicio()
+    {
+        // Declaração de variáveis
+        cadeia nomeFuncionario
+        real horasTrabalhadas, gratificacaoRepouso, salarioSemanal
+        inteiro numeroFuncionarios, contador
+
+        // Entrada do número de funcionários
+        escreva("Digite o número de funcionários: ")
+        leia(numeroFuncionarios)
+
+        // Loop para processar cada funcionário
+        para(contador = 1; contador <= numeroFuncionarios; contador++)
+        {
+            // Entrada de dados do funcionário
+            escreva("\nFuncionário ", contador, ":\n")
+            escreva("Digite o nome do funcionário: ")
+            leia(nomeFuncionario)
+
+            escreva("Digite o número de horas trabalhadas de segunda a sexta-feira: ")
+            leia(horasTrabalhadas)
+
+            // Cálculo do total de horas trabalhadas na semana
+            real totalHorasSemana = horasTrabalhadas
+
+            // Cálculo da gratificação de repouso semanal
+            gratificacaoRepouso = totalHorasSemana * 0.30
+
+            // Cálculo do salário semanal
+            salarioSemanal = (totalHorasSemana + gratificacaoRepouso) * 45.00
+
+            // Saída de dados do funcionário
+            escreva("\nNome do funcionário: ", nomeFuncionario)
+            escreva("\nTotal de horas trabalhadas na semana: ", totalHorasSemana)
+            escreva("\nGratificação de repouso semanal: ", gratificacaoRepouso)
+            escreva("\nSalário semanal: R$ ", salarioSemanal)
+        }
+    }
+}
