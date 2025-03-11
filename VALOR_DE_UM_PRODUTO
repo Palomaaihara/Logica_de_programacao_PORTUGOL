@@ -1,0 +1,28 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia nome, produto
+		inteiro quant
+		real valor, preco, calculo
+
+		escreva("Digite o nome do produto: ")
+		leia(nome)
+		escreva("Quantidade do produto vendido: ")
+		leia(quant)
+		escreva("Valor do produto: ")
+		leia(valor)
+
+		preco = valor * quant 
+		calculo = preco * 0.1
+		
+		 se (preco >= 100){
+		 	escreva("O ",nome," esta 10% mais barato e agora seu preço esta apenas por ",valor - calculo)
+		 	}
+		 senao{
+		 	escreva("Este produto nao tem desconto, pois nao atigu o valor de R$ 100.00!")
+		 	}
+		 }
+		
+	}
