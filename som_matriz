@@ -1,0 +1,20 @@
+programa
+{
+    funcao inicio()
+    {
+        const inteiro LINHAS = 3, COLUNAS = 3
+        inteiro matriz[LINHAS][COLUNAS], soma = 0, linha, coluna
+
+        para (linha = 0; linha < LINHAS; linha++)
+        {
+            para (coluna = 0; coluna < COLUNAS; coluna++)
+            {
+                escreva("Digite o elemento [", linha, "][", coluna, "]: ")
+                leia(matriz[linha][coluna])
+                soma += matriz[linha][coluna]
+            }
+        }
+
+        escreva("\nSoma dos elementos da matriz: ", soma)
+    }
+}
