@@ -1,0 +1,77 @@
+programa
+{
+    funcao inicio()
+    {
+        real num1, num2, resultado
+        inteiro opcao
+
+        para (inteiro i = 1; i <= 999; i++)
+        {
+            escreva("\n--- Calculadora ---\n")
+            escreva("1. Adição\n")
+            escreva("2. Subtração\n")
+            escreva("3. Multiplicação\n")
+            escreva("4. Divisão\n")
+            escreva("5. Porcentagem\n")
+            escreva("6. Sair\n")
+            escreva("Escolha uma opção: ")
+            leia(opcao)
+
+            se (opcao == 6)
+            {
+                pare
+            }
+
+            se (opcao >= 1 e opcao <= 5)
+            {
+                se (opcao == 5){
+                    escreva("Quantos porcentos? ")
+                    leia(num2)
+                    escreva("De qual valor? ")
+                    leia(num1)
+                }
+                senao{
+                    escreva("Digite o primeiro número: ")
+                    leia(num1)
+                    escreva("Digite o segundo número: ")
+                    leia(num2)
+                }
+
+            }
+
+            escolha (opcao)
+            {
+                caso 1:
+                    resultado = num1 + num2
+                    escreva("Resultado: ", resultado, "\n")
+                    pare
+                caso 2:
+                    resultado = num1 - num2
+                    escreva("Resultado: ", resultado, "\n")
+                    pare
+                caso 3:
+                    resultado = num1 * num2
+                    escreva("Resultado: ", resultado, "\n")
+                    pare
+                caso 4:
+                    se (num2 == 0)
+                    {
+                        escreva("Erro: Divisão por zero!\n")
+                    } senao
+                    {
+                        resultado = num1 / num2
+                        escreva("Resultado: ", resultado, "\n")
+                    }
+                    pare
+                caso 5:
+                    resultado = (num2 * num1) / 100
+                    escreva(num2, "% de ", num1, " é: ", resultado, "\n")
+                    pare
+                caso 6:
+                    pare
+                caso contrario:
+                    escreva("Erro: Opção inválida!\n")
+            }
+        }
+    }
+}
