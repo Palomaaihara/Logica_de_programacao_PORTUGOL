@@ -1,0 +1,29 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro numeroAleatorio, palpite
+
+        // Gere um número aleatório (simulação)
+        numeroAleatorio = 42
+
+        escreva("Adivinhe o número (1 a 100): ")
+        leia(palpite)
+
+        enquanto (palpite != numeroAleatorio)
+        {
+            se (palpite < numeroAleatorio)
+            {
+                escreva("Maior...\n")
+            } senao
+            {
+                escreva("Menor...\n")
+            }
+
+            escreva("Tente novamente: ")
+            leia(palpite)
+        }
+
+        escreva("Parabéns! Você acertou!\n")
+    }
+}
