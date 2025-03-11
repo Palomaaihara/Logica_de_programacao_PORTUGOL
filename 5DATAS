@@ -1,0 +1,57 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro dia[5], mes[5], ano[5] // Armazena até 5 datas
+        inteiro quantidade = 0
+        inteiro opcao
+
+        faca
+        {
+            escreva("\n--- Menu ---\n")
+            escreva("1. Salvar Data\n")
+            escreva("2. Exibir Datas\n")
+            escreva("3. Sair\n")
+            escreva("Escolha uma opção: ")
+            leia(opcao)
+
+            escolha(opcao)
+            {
+                caso 1:
+                    se (quantidade < 5)
+                    {
+                        escreva("Digite o dia: ")
+                        leia(dia[quantidade])
+                        escreva("Digite o mês: ")
+                        leia(mes[quantidade])
+                        escreva("Digite o ano: ")
+                        leia(ano[quantidade])
+                        quantidade++
+                        escreva("Data salva!\n")
+                    } senao
+                    {
+                        escreva("Limite de datas atingido.\n")
+                    }
+                    pare
+                caso 2:
+                    se (quantidade > 0)
+                    {
+                        escreva("\n--- Datas Salvas ---\n")
+                        para (inteiro i = 0; i < quantidade; i++)
+                        {
+                            escreva(dia[i], "/", mes[i], "/", ano[i], "\n")
+                        }
+                    } senao
+                    {
+                        escreva("Nenhuma data salva.\n")
+                    }
+                    pare
+                caso 3:
+                    escreva("Saindo...\n")
+                    pare
+                caso contrario:
+                    escreva("Opção inválida.\n")
+            }
+        } enquanto (opcao != 3)
+    }
+}
