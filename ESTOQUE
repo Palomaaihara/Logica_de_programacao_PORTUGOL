@@ -1,0 +1,88 @@
+programa
+{
+    funcao inicio()
+    {
+        cadeia nomes[10]
+        inteiro quantidades[10]
+        inteiro diaValidade[10], mesValidade[10], anoValidade[10]
+        real precos[10]
+        inteiro quantidade = 0
+        inteiro opcao
+        cadeia nomeProduto
+        inteiro diaAtual = 1, mesAtual = 1, anoAtual = 2024 // Data atual para teste
+
+        faca
+        {
+            escreva("\n--- Sistema de Estoque ---\n")
+            escreva("1. Adicionar Produto\n")
+            escreva("2. Remover Produto\n")
+            escreva("3. Listar Produtos\n")
+            escreva("4. Verificar Vencidos\n")
+            escreva("5. Sair\n")
+            escreva("Escolha uma opção: ")
+            leia(opcao)
+
+            escolha(opcao)
+            {
+                caso 1: // Adicionar Produto
+                    se (quantidade < 10)
+                    {
+                        escreva("Digite o nome do produto: ")
+                        leia(nomes[quantidade])
+                        escreva("Digite a quantidade: ")
+                        leia(quantidades[quantidade])
+                        escreva("Digite o dia de validade: ")
+                        leia(diaValidade[quantidade])
+                        escreva("Digite o mês de validade: ")
+                        leia(mesValidade[quantidade])
+                        escreva("Digite o ano de validade: ")
+                        leia(anoValidade[quantidade])
+                        escreva("Digite o preço: ")
+                        leia(precos[quantidade])
+                        quantidade++
+                        escreva("Produto adicionado!\n")
+                    } senao
+                    {
+                        escreva("Estoque cheio!\n")
+                    }
+                    pare
+                caso 2: // Remover Produto
+                    // ... (igual ao código anterior)
+                    pare
+                caso 3: // Listar Produtos
+                    se (quantidade > 0)
+                    {
+                        escreva("\n--- Produtos em Estoque ---\n")
+                        para (inteiro i = 0; i < quantidade; i++)
+                        {
+                            escreva(nomes[i], ": ", quantidades[i], ", Validade: ", diaValidade[i], "/", mesValidade[i], "/", anoValidade[i], ", Preço: R$", precos[i], "\n")
+                        }
+                    } senao
+                    {
+                        escreva("Estoque vazio!\n")
+                    }
+                    pare
+                caso 4: // Verificar Vencidos
+                    verificarVencidos(nomes, quantidades, diaValidade, mesValidade, anoValidade, quantidade, diaAtual, mesAtual, anoAtual)
+                    pare
+                caso 5: // Sair
+                    escreva("Saindo...\n")
+                    pare
+                caso contrario:
+                    escreva("Opção inválida!\n")
+            }
+        } enquanto (opcao != 5)
+    }
+
+    funcao verificarVencidos(cadeia nomes[], inteiro quantidades[], inteiro diaValidade[], inteiro mesValidade[], inteiro anoValidade[], inteiro quantidade, inteiro diaAtual, inteiro mesAtual, inteiro anoAtual)
+    {
+        escreva("\n--- Produtos Vencidos ---\n")
+        para (inteiro i = 0; i < quantidade; i++)
+        {
+            se (anoValidade[i] < anoAtual ou (anoValidade[i] == anoAtual e mesValidade[i] < mesAtual) ou (anoValidade[i] == anoAtual e mesValidade[i] == mesAtual e diaValidade[i] < diaAtual))
+            {
+                escreva(nomes[i], ": ", quantidades[i], ", Validade: ", diaValidade[i], "/", mesValidade[i], "/", anoValidade[i], ", Preço: R$", precos[i], "\n")
+            }
+        }
+    }
+}
