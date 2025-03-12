@@ -1,0 +1,41 @@
+programa {
+    funcao inicio() {
+        real num1, num2, resultado
+        caracter operador
+
+        escreva("----------------------------------\n")
+        escreva("         Calculadora Simples      \n")
+        escreva("----------------------------------\n")
+
+        escreva("Digite o primeiro número: ")
+        leia(num1)
+
+        escreva("Digite o operador (+, -, *, /): ")
+        leia(operador)
+
+        escreva("Digite o segundo número: ")
+        leia(num2)
+
+        se (operador == '+') {
+            resultado = num1 + num2
+            escreva("Resultado: ", resultado)
+        } senao se (operador == '-') {
+            resultado = num1 - num2
+            escreva("Resultado: ", resultado)
+        } senao se (operador == '*') {
+            resultado = num1 * num2
+            escreva("Resultado: ", resultado)
+        } senao se (operador == '/') {
+            se (num2 != 0) {
+                resultado = num1 / num2
+                escreva("Resultado: ", resultado)
+            } senao {
+                escreva("Erro: Divisão por zero!")
+            }
+        } senao {
+            escreva("Operador inválido!")
+        }
+
+        escreva("\n----------------------------------\n")
+    }
+}
