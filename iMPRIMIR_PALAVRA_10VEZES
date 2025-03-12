@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+    cadeia palavra
+    inteiro i
+
+    escreva("Digite a palavra: ")
+    leia(palavra)
+
+    para(i = 1; i <= 10; i++){
+      escreva("\n", palavra)
+    }
+  }
+}
