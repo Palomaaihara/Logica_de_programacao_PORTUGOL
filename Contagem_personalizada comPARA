@@ -1,0 +1,17 @@
+programa {
+  funcao inicio() {
+    inteiro num_i, num_f, incremento, i
+
+    
+    escreva("Digite o valor inicial: ")
+    leia(num_i)
+    escreva("Digite o valor final: ")
+    leia(num_f)
+    escreva("Digite o valor do incremento: ")
+    leia(incremento)
+
+    para(i = num_i; i <= num_f; i+=incremento){
+      escreva("\n", i)
+    }
+  }
+}
