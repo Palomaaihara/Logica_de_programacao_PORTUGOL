@@ -1,0 +1,14 @@
+programa {
+  funcao inicio() {
+    inteiro i, num, soma = 0.0
+
+    para(i = 1; i <= 10; i++){
+      escreva("Digite o ",i," numero: ")
+      leia(num)
+          se(num > 5){
+            soma = soma + num
+          }
+    }
+    escreva("\nA soma dos numeros numeros maiores que 5 é ", soma)
+  }
+}
