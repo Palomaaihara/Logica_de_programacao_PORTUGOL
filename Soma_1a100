@@ -1,0 +1,10 @@
+programa {
+  funcao inicio() {
+    inteiro num, cont = 0
+    
+    para(num = 1;num <= 100; num++){
+      cont = cont + num
+    }
+     escreva("\nA soma dos numeros de um a cem é ", cont)
+  } 
+}
