@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    cadeia nome
+    real notas, cont, media, soma = 0.0
+    escreva("Digite o seu nome: ")
+    leia(nome)
+
+        para(cont = 1; cont <= 4; cont++){
+        escreva("Digite a nota do bimestre ",cont," : ")
+        leia(notas)
+        soma = soma + notas
+    }
+    media = soma/4
+    escreva(nome,", a média das suas notas é ", media,".")
+    se(media >= 7){
+      escreva(" E voce foi aprovado! :)")
+    }
+    senao se (media < 6.9 e media > 5){
+      escreva(" E voce esta de recuperaçao! :/")
+    }
+    senao{
+      escreva(" E voce foi reprovado! :(")
+    }
+  }
+}
