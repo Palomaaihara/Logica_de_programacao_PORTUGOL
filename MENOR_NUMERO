@@ -1,6 +1,6 @@
 programa {
     funcao inicio() {
-        inteiro numero, menor = 2147483648 // Inicializei com o menor valor possível para um inteiro
+        inteiro numero, menor = 2147483648 // Inicializei com o maior valor possível para um inteiro
         inteiro contador
 
         para (contador = 1; contador <= 10; contador++) {
@@ -12,6 +12,6 @@ programa {
             }
         }
 
-        escreva("O maior número digitado foi: ", menor)
+        escreva("O menor número digitado foi: ", menor)
     }
 }
