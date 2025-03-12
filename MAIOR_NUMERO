@@ -1,0 +1,17 @@
+programa {
+    funcao inicio() {
+        inteiro numero, maior = -2147483648 // Inicializei com o menor valor possível para um inteiro
+        inteiro contador
+
+        para (contador = 1; contador <= 10; contador++) {
+            escreva("Digite o ", contador, "º número: ")
+            leia(numero)
+
+            se (numero > maior) {
+                maior = numero
+            }
+        }
+
+        escreva("O maior número digitado foi: ", maior)
+    }
+}
