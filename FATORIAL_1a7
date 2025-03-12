@@ -1,0 +1,22 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	//FATORIAL DE UM NUMERO
+		inteiro num, i, soma = 1
+
+		escreva("Digite um numero de 1 até 7: ")
+		leia(num)
+
+		se (num < 1 e num > 7){
+			escreva("O numero inserido nao esta entre 1 e 7!")
+		}
+		senao{
+			para(i = 1; i <= num; i++){
+				soma = soma * i
+				escreva("\n", soma)
+				}
+		}
+	}
+}
