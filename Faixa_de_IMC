@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+    real peso, altura, imc
+
+    escreva("------- CALCULO DO IMC -------")
+
+    escreva("\nDIGITE O SEU PESO: ")
+    leia(peso)
+
+    escreva("DIGITE A SUA ALTURA:")
+    leia(altura)
+
+    imc = peso / (altura * altura)
+    
+
+    se(imc <= 18.5){
+        escreva("O seu IMC é ",imc," e voce esta abaixo do peso.")
+    }
+    senao se(imc > 18.5 e imc <= 24.9){
+        escreva("O seu IMC é ",imc," e voce esta no peso normal.")
+    }
+    senao se(imc > 24.9 e imc <= 29.9){
+        escreva("O seu IMC é ",imc," e voce esta em sobrepeso.")
+    }
+    senao se(imc > 29.9 e imc <= 34.9){
+        escreva("O seu IMC é ",imc," e voce esta na obesidade grau I")
+    }
+    senao se(imc > 34.9 e imc <= 39.9){
+        escreva("O seu IMC é ",imc," e voce esta na obesidade grau II")
+    }
+    senao{
+        escreva("O seu IMC é ",imc," e voce esta na obesidade grau III")
+    }
+  }
+}
+
