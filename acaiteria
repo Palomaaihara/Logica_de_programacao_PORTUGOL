@@ -1,0 +1,39 @@
+programa {
+  funcao inicio() {
+    //Declaração de Variaveis
+    real qtd_acai, qtd_sorvete, preco_acai = 12.00, preco_sorvete = 18.00, valor_total,  valor_final
+    inteiro opcao_pagamento
+    //Input/Entrada
+    escreva("Informe a quantidade de açaí desejada (em KG): ")
+    leia(qtd_acai)
+    escreva("Informe a quantidade de sorvete desejada (em KG): ")
+    leia(qtd_sorvete)
+    //Calculo do Valor Total
+    valor_total = (qtd_acai * preco_acai) + (qtd_sorvete * preco_sorvete)
+    escreva("\nO valor total é R$ ", valor_total,"\n")
+    //Opções de Pagamento
+    escreva("\nOpções de Pagamento:\n")
+    escreva("1. Pix (10% de desconto)\n")
+    escreva("2. Dinheiro (5% de desconto)\n")
+    escreva("3. Débito (3% de desconto)\n")
+    escreva("4. Crédito (Sem desconto)")
+    escreva("\nDigite a opção de pagamento: ")
+    leia(opcao_pagamento)
+    // Cálculo do valor final  
+      se (opcao_pagamento == 1) {
+        valor_final = valor_total * 0.90 
+        escreva("\nO valor final com o desconto é R$ ", valor_final)
+      } senao se (opcao_pagamento == 2) {
+        valor_final = valor_total * 0.95
+        escreva("\nO valor final com o desconto é R$ ", valor_final)
+      } senao se (opcao_pagamento == 3) {
+        valor_final = valor_total * 0.97
+         escreva("\nO valor final com o desconto é R$ ", valor_final)
+      } senao se (opcao_pagamento == 4) {
+        valor_final = valor_total  // SEM DESCONTO
+         escreva("\nSem desconto! O total é de R$ ", valor_final)
+      } senao {
+        escreva("\nOpção inválida!")
+      }
+  }
+}
