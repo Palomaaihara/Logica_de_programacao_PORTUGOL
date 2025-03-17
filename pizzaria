@@ -1,0 +1,53 @@
+programa
+{
+    funcao inicio()
+    {
+        // Declaração de variáveis
+        inteiro pizza_P, pizza_M, pizza_G, qtd_refri, opcao_pagamento
+        real valor_total, valor_final, preco_pequena = 25.00, preco_media = 35.00, preco_grande = 45.00, preco_refri = 8.00
+
+        // Entrada de dados
+        escreva("Bem-vindo à Pizzaria Delícia!\n")
+        escreva("Digite a quantidade de pizzas pequenas: ")
+        leia(pizza_P)
+        escreva("Digite a quantidade de pizzas médias: ")
+        leia(pizza_M)
+        escreva("Digite a quantidade de pizzas grandes: ")
+        leia(pizza_G)
+        escreva("Digite a quantidade de refrigerantes: ")
+        leia(qtd_refri)
+
+        // Cálculo do valor total do pedido
+        valor_total = (pizza_P * preco_pequena) + (pizza_M * preco_media) + (pizza_G * preco_grande) + (qtd_refri * preco_refri)
+
+        // Exibição do valor total
+        escreva("\nValor total do pedido: R$ ", valor_total, "\n\n")
+
+        // Opções de pagamento
+        escreva("Opções de pagamento:\n")
+        escreva("1. Pagamento online (15% de desconto)\n")
+        escreva("2. Retirada no local (10% de desconto)\n")
+        escreva("3. Cartão de crédito (sem desconto)\n")
+        escreva("Digite a opção de pagamento: ")
+        leia(opcao_pagamento)
+
+        // Cálculo do valor final com desconto
+        escolha (opcao_pagamento) {
+            caso 1:
+                valor_final = valor_total * 0.85
+                pare 
+            caso 2:
+                valor_final = valor_total * 0.90 
+                pare
+            caso 3:
+                valor_final = valor_total // SEM DESCONTO
+                pare
+            caso contrario:
+                escreva("Opção inválida!")
+                retorne
+        }
+
+        // Exibição do valor final
+        escreva("\nValor final do pedido: R$ ", valor_final)
+    }
+}
