@@ -1,0 +1,13 @@
+programa
+{
+    funcao inicio()
+    {
+      real num, soma = 0
+      para (inteiro i = 1; i <= 5; i++){
+        escreva("\nDigite o ",i,"º número: ")
+        leia(num)
+        soma = soma + num
+      }
+      escreva("\n", soma)
+    }
+}
