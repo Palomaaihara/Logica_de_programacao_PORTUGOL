@@ -1,0 +1,28 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro numero, maior, menor, i
+        // Inicializa as variáveis maior e menor com o primeiro número digitado
+        escreva("Digite o 1º número: ")
+        leia(numero)
+        maior = numero
+        menor = numero
+        // Loop para ler os próximos 4 números
+        para (i = 2; i <= 5; i++) {
+            escreva("Digite o ", i, "º número: ")
+            leia(numero)
+            // Verifica se o número atual é maior que o maior atual
+            se (numero > maior) {
+                maior = numero
+            }
+            // Verifica se o número atual é menor que o menor atual
+            se (numero < menor) {
+                menor = numero
+            }
+        }
+        // Imprime o maior e o menor número
+        escreva("O maior número digitado foi: ", maior, "\n")
+        escreva("O menor número digitado foi: ", menor)
+    }
+}
