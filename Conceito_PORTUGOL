@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    real nota
+    escreva("Informe a nota do aluno: ")
+    leia(nota)
+
+    escolha(verdadeiro){
+        caso nota <= 1.9:
+        escreva("Conceito E")
+        pare
+        caso nota < 3.9:
+        escreva("Conceito D")
+        pare
+        caso nota < 5.9:
+        escreva("Conceito C")
+        pare
+        caso nota < 8.9:
+        escreva("Conceito B")
+        pare
+        caso nota == 10:
+        escreva("Conceito A")
+        pare
+    }
+    }
+}
