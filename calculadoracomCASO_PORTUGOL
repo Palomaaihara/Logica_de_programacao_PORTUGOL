@@ -1,0 +1,65 @@
+programa {
+  funcao inicio() {
+    //CALCULADORA
+
+    real num1, num2 
+    caracter operacao
+
+    escreva("----------- CALCULADORA BÁSICA -----------\n")
+    escreva("Digite a operação (+, -, /, *, %, &): ")
+      leia(operacao)
+    
+    escolha (operacao){
+        caso '+':
+          escreva("Digite o primeiro numero da adição: ")
+            leia(num1)
+          escreva("Digite o segundo numero da adição: ")
+            leia(num2)
+          escreva("\n",num1," + ",num2," = ", num1 + num2)
+          pare
+        caso '-':
+          escreva("Digite o primeiro numero da subtração: ")
+            leia(num1)
+          escreva("Digite o segundo numero da subtração: ")
+            leia(num2)
+          escreva("\n",num1," - ",num2," = ", num1 - num2)
+          pare
+        caso '*':
+          escreva("Digite o primeiro numero da multiplicação: ")
+            leia(num1)
+          escreva("Digite o segundo numero da multiplicação: ")
+            leia(num2)
+          escreva("\n",num1," X ",num2," = ", num1 * num2)
+          pare
+        caso '/':
+          escreva("Digite o primeiro numero (dividendo): ")
+            leia(num1)
+          escreva("Digite o segundo numero (divisor): ")
+            leia(num2)
+          escreva("\n",num1," / ",num2," = ", num1 / num2)
+          pare
+        caso '%':
+          escreva("Digite o primeiro numero (por cento): ")
+            leia(num1)
+          escreva(num1,"% de... Digite o segundo numero: ")
+            leia(num2)
+          escreva("\n",num1,"% de ",num2," = ", num1 * (num2/100))
+          pare
+          //Eu escolhi o caracter "&" para representar uma potenciação
+        caso '&':
+          escreva("Voce escolheu a potenciação! ")
+          escreva("\nDigite o numero (EXPOENTE): ")
+            leia(num1)
+          escreva("Digite o segundo numero: ")
+            leia(num2)
+            real soma = num2
+          para(inteiro i = 1; i <= num1; i++){
+            soma = soma * i
+          }
+           escreva("\n",num2,"^^", num1," = ", soma)
+          pare
+        caso contrario:
+          escreva("\nOperação Inválida! ")
+    }
+  }
+}
