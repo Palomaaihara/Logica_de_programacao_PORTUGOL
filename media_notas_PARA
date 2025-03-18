@@ -1,0 +1,15 @@
+programa
+{
+    funcao inicio()
+    {
+      real qtd_notas, num, media = 0
+      escreva("Quantas notas?  ")
+      leia(qtd_notas)
+      para (inteiro i = 1; i <= qtd_notas; i++){
+        escreva("\nDigite a ",i,"º nota: ")
+        leia(num)
+        media = media + num
+      }
+      escreva("\n", media/qtd_notas)
+    }
+}
